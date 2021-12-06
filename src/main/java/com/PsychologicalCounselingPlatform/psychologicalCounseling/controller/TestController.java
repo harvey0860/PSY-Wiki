@@ -1,14 +1,19 @@
 package com.PsychologicalCounselingPlatform.psychologicalCounseling.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.PsychologicalCounselingPlatform.psychologicalCounseling.service.TestService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 // @Controller return a page
 @RestController
 public class TestController {
+    @Resource
+    private TestService testService;
 
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String hello() {
-        return "hello";
+        return "hello3";
     }
 }
